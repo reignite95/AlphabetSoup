@@ -52,18 +52,18 @@ public class Soup {
     //returns the letters currently stored with the company name placed directly in the center of all
     //the letters
     //Precondition: You must have inputted a company name and added a word to letters
-    //Postcondition: letters the string letters after the company name has been placed in the center
+    //Postcondition: Places the company name directly in the center of the string letters. Returns letters
     public String companyCentered(){
         String index1 = letters.substring(letters.length() / 2);
         String index2 = letters.substring(0, letters.length() / 2);
-        letters = index2 + company + index1;
-        return letters;
+        String lettersCentered = index2 + company + index1;
+        return lettersCentered;
     }
 
 
     //should remove the first available vowel from letters. If there are no vowels this method has no effect.
     //Precondtion: You must have characters in the string letters, and a vowel for it to remove.
-    //Postcondition: Removes the first vowel. If there is none nothing happens.
+    //Postcondition: Removes the first vowel. If there is no vowel nothing happens.
     public void removeFirstVowel(){
         letters = letters.replaceFirst("[aeiouAEIOU]", "");
     }
